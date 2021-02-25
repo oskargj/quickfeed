@@ -60,7 +60,7 @@ var reg = prometheus.NewRegistry()
 func main() {
 	var (
 		baseURL    = flag.String("service.url", "", "base service DNS name")
-		dbFile     = flag.String("database.file", "qf.db", "database file")
+		dbFile     = flag.String("database.file", "ag-test.db", "database file")
 		public     = flag.String("http.public", "public", "path to content to serve")
 		httpAddr   = flag.String("http.addr", ":8081", "HTTP listen address")
 		grpcAddr   = flag.String("grpc.addr", ":9090", "gRPC listen address")
