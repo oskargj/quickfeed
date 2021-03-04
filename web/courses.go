@@ -157,7 +157,7 @@ func (s *AutograderService) getAllCourseSubmissions(request *pb.SubmissionsForCo
 	if err != nil {
 		return nil, err
 	}
-	// course.SetSlipDays()
+	course.SetSlipDays()
 
 	for _, a := range assignments {
 		for _, sbm := range a.Submissions {
