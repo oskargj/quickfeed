@@ -127,3 +127,6 @@ prometheus:
 
 quickfeed-go:
 	docker build -f ci/scripts/go/Dockerfile -t quickfeed:go .
+
+local-docker:
+	docker-compose up
