@@ -50,6 +50,8 @@ proto:
 	Mgoogle/protobuf/struct.proto=github.com/gogo/protobuf/types,\
 	Mgoogle/protobuf/timestamp.proto=github.com/gogo/protobuf/types,\
 	Mgoogle/protobuf/wrappers.proto=github.com/gogo/protobuf/types:. \
+	--swift_out=../$(proto-path)/ \
+    --grpc-swift_out=Client=true,Server=false:../$(proto-path)/ \
 	--js_out=import_style=commonjs:../$(proto-path)/ \
 	--grpc-web_out=import_style=typescript,mode=grpcweb:../$(proto-path)/ ag.proto
 	$(sedi) '/gogo/d' $(proto-path)/ag_pb.js $(proto-path)/AgServiceClientPb.ts $(proto-path)/ag_pb.d.ts
